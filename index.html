@@ -1,74 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marko Benacic</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marko Benacic - Personal Website</title>
   <style>
-    :root {
-      --accent-color: royalblue;
-      --text-color: #333;
-      --background: #fff;
-    }
-
     body {
-      font-family: system-ui, sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
-      background-color: var(--background);
-      color: var(--text-color);
     }
-
     h1, h2 {
-      line-height: 1.2;
+      color: #2c3e50;
     }
-
     ul {
-      padding-left: 1.2rem;
+      list-style: square;
     }
-
     a {
-      color: var(--accent-color);
+      color: #2980b9;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
-
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 1.3rem;
-      }
+    .social-links a {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .article {
+      background-color: white;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .article h3 {
+      margin-top: 0;
+    }
+    #toTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    #toTopBtn:hover {
+      background-color: #1f6396;
+    }
+    .nav-articles {
+      position: fixed;
+      top: 220px;
+      right: 20px;
+      width: 200px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+    .nav-articles h3 {
+      margin-top: 0;
+    }
+    .nav-articles ul {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+    .top-right-social {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 200px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1001;
+    }
+    main {
+      margin-right: 240px;
     }
   </style>
 </head>
 <body>
-  <h1>Hello, I'm Marko 👋</h1>
-  <p>Welcome to my personal website.</p>
+  <h1 id="top">Marko Benacic - Personal Website</h1>
 
-  <h2>📌 Social Links</h2>
-  <ul>
-    <li><a href="https://github.com/Markobenacic" target="_blank">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/marko-benacic/" target="_blank">LinkedIn</a></li>
-  </ul>
+  <div class="top-right-social">
+    <h3>Connect With Me</h3>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank">LinkedIn</a><br>
+      <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank">Instagram</a><br>
+      <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
+    </div>
+  </div>
 
-  <h2>🛠️ Personal Projects</h2>
-  <ul>
-    <li><strong>Project 1:</strong> A short description - <a href="https://github.com/YOUR_USERNAME/project1">GitHub Repo</a></li>
-    <li><strong>Project 2:</strong> Another short description - <a href="#">Demo</a></li>
-  </ul>
+  <div class="nav-articles">
+    <h3>Jump to an article:</h3>
+    <ul>
+      <li><a href="#joy-of-coding">The Joy of Coding</a></li>
+      <li><a href="#love-football">Why I Love Football</a></li>
+      <li><a href="#top-movies">Top 5 Movies That Inspire Me</a></li>
+      <li><a href="#smart-watch">A smart watch you've never heard of</a></li>
+      <li><a href="#level-up-games">Leveling Up Through Games</a></li>
+      <li><a href="#first-app">My First App: Lessons Learned</a></li>
+    </ul>
+  </div>
 
-  <h2>🎯 Interests</h2>
-  <p>Football, Gym, iOS Development...</p>
+  <main>
+    <h2>About Me</h2>
+    <p>Hi! I'm Marko. Welcome to my personal space on the web. Here are some of my interests:</p>
+    <ul>
+      <li>🎮 Playing video games</li>
+      <li>🎬 Watching movies</li>
+      <li>⚽ Playing football</li>
+      <li>💻 Exploring software development</li>
+      <li>Retro technology</li>
+    </ul>
+
+    <h2>Blog</h2>
+
+    <div class="article" id="joy-of-coding">
+      <h3>The Joy of Coding</h3>
+      <p>There’s something magical about turning ideas into reality using just a keyboard and your brain. I still remember my first "Hello, World!" — it felt like I unlocked a secret language that powers the world.</p>
+    </div>
+
+    <div class="article" id="love-football">
+      <h3>Why I Love Football</h3>
+      <p>Football isn’t just a sport, it’s a passion. I love the adrenaline, the strategy, and the teamwork. Whether I’m playing or just watching with friends, it never gets old.</p>
+    </div>
+
+    <div class="article" id="top-movies">
+      <h3>Top 5 Movies That Inspire Me</h3>
+      <p>Movies like Interstellar, The Social Network, and The Pursuit of Happyness have really pushed me to think bigger. They remind me of the power of dreams and determination.</p>
+    </div>
+
+    <div class="article" id="smart-watch">
+      <h3>A smart watch you've never heard of</h3>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+
+    <div class="article" id="level-up-games">
+      <h3>Leveling Up Through Games</h3>
+      <p>Games teach us more than we think — patience, strategy, problem-solving. Plus, they’re super fun! I’ve always enjoyed exploring immersive worlds and tackling challenges head-on.</p>
+    </div>
+
+    <div class="article" id="first-app">
+      <h3>My First App: Lessons Learned</h3>
+      <p>Building my first app taught me that success comes from iteration and feedback. It was far from perfect, but launching it gave me confidence and clarity for future projects.</p>
+    </div>
+  </main>
+
+  <button id="toTopBtn" onclick="scrollToTop()">⬆ Top</button>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+  <!-- Add this inside <body>, preferably after <main> or before the closing </body> tag -->
+<h2>Autoplay Red-Green-Blue Simulation</h2>
+<div style="position: fixed; bottom: 20px; left: 20px; z-index: 1002; background: white; border: 1px solid #ccc; border-radius: 8px; padding: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+  <h4 style="margin: 0 5px 5px 5px; font-family: Arial, sans-serif; text-align: center;">Who will win?</h4>
+  <p style="font-size: 12px; margin: 0 0 5px 0; text-align: center; font-family: Arial, sans-serif;">
+    🔴 beats 🔵<br>
+    🔵 beats 🟢<br>
+    🟢 beats 🔴 
+  </p>
+  <p id="winnerText" style="font-size: 12px; text-align: center; margin: 0 0 5px 0; font-family: Arial, sans-serif;"></p>
+  <canvas id="rpsCanvas" width="250" height="250" style="display: block;"></canvas>
+</div>
+
+<script>
+class Creature {
+  constructor(x, y, type) {
+    this.x = x;
+    this.y = y;
+    this.type = type; // 'red', 'green', 'blue'
+    this.radius = 10;
+    this.color = { red: '#e74c3c', green: '#27ae60', blue: '#2980b9' }[type];
+    this.dx = (Math.random() - 0.5) * 4;
+    this.dy = (Math.random() - 0.5) * 4;
+  }
+
+  move() {
+    this.x += this.dx;
+    this.y += this.dy;
+    if (this.x <= 0 || this.x >= 250) this.dx *= -1;
+    if (this.y <= 0 || this.y >= 250) this.dy *= -1;
+  }
+
+  draw(ctx) {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+    ctx.strokeStyle = '#333';
+    ctx.stroke();
+  }
+
+  checkCollision(other) {
+    let dx = this.x - other.x;
+    let dy = this.y - other.y;
+    let dist = Math.sqrt(dx * dx + dy * dy);
+    return dist < this.radius + other.radius;
+  }
+}
+
+const canvas = document.getElementById('rpsCanvas');
+const ctx = canvas.getContext('2d');
+const winnerText = document.getElementById('winnerText');
+let creatures = [];
+let gameInterval;
+let winCount = { red: 0, green: 0, blue: 0 };
+
+function spawnCreatures() {
+  creatures = [];
+  const types = ['red', 'green', 'blue'];
+  types.forEach(type => {
+    for (let i = 0; i < 15; i++) {
+      creatures.push(new Creature(Math.random() * 230 + 10, Math.random() * 230 + 10, type));
+    }
+  });
+}
+
+function beats(a, b) {
+  return (
+    (a === 'red' && b === 'blue') ||
+    (a === 'blue' && b === 'green') ||
+    (a === 'green' && b === 'red')
+  );
+}
+
+function animateWinner(winnerType) {
+  let frame = 0;
+  const maxFrames = 30;
+  const interval = setInterval(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    creatures.forEach(c => {
+      if (c.type === winnerType) {
+        c.radius = 10 + Math.sin(frame * 0.3) * 4; // pulsing animation
+        c.draw(ctx);
+      }
+    });
+    frame++;
+    if (frame >= maxFrames) {
+      clearInterval(interval);
+      startNextRound();
+    }
+  }, 30);
+}
+
+function updateGame() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  for (let i = 0; i < creatures.length; i++) {
+    let c1 = creatures[i];
+    c1.move();
+    c1.draw(ctx);
+    for (let j = i + 1; j < creatures.length; j++) {
+      let c2 = creatures[j];
+      if (c1.checkCollision(c2)) {
+        if (beats(c1.type, c2.type)) {
+          c2.type = c1.type;
+          c2.color = c1.color;
+        } else if (beats(c2.type, c1.type)) {
+          c1.type = c2.type;
+          c1.color = c2.color;
+        }
+      }
+    }
+  }
+
+  let typesLeft = new Set(creatures.map(c => c.type));
+  if (typesLeft.size === 1) {
+    clearInterval(gameInterval);
+    const winner = [...typesLeft][0];
+    winCount[winner]++;
+    const emoji = winner === 'red' ? '🔴' : winner === 'blue' ? '🔵' : '🟢';
+    winnerText.innerText = `Wins - 🔴: ${winCount.red} | 🟢: ${winCount.green} | 🔵: ${winCount.blue}`;
+    animateWinner(winner);
+  }
+}
+
+function startNextRound() {
+  spawnCreatures();
+  gameInterval = setInterval(updateGame, 30);
+}
+
+startNextRound();
+</script>
+
+
 </body>
 </html>
